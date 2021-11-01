@@ -1,0 +1,48 @@
+/* 
+=========================
+    start header css
+=========================
+*/
+.header-section{}
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-logo-area{
+    width: 170px;
+}
+.logo-size{
+    width: 140px;
+}
+/* header right content */
+.header-right-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(100% - 170px);
+    align-items: center;
+}
+.header-right-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.language-nav{
+    position: relative;
+}
+.sub-nav{
+    position: absolute;
+    opacity: 0;
+}
+.select-language {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+/* 
+=========================
+    end header css
+=========================
+*/
