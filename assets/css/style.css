@@ -3,10 +3,13 @@
     start header css
 =========================
 */
-.header-section{}
+.header-section {
+    padding: 15px 0;
+}
 .header-content {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .header-logo-area{
@@ -18,7 +21,7 @@
 /* header right content */
 .header-right-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
     width: calc(100% - 170px);
     align-items: center;
@@ -28,6 +31,9 @@
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+}
+.glob-icon i{
+    color:rgba(255, 84, 33, 1);
 }
 .language-nav{
     position: relative;
@@ -41,8 +47,212 @@
     align-items: center;
     gap: 12px;
 }
+.signin-button {
+    display: none;
+}
+.signin-button-sm i{
+    font-size: 20px;
+}
+.header-right-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+.header-middle-nav {
+    display: none;
+}
+.header-right-nav-left{
+    display: none;
+}
+.header-search{
+    display: none;
+}
+.toggle-icon-line{
+    width:25px;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    margin-bottom: 4px;
+  
+}
+.toggle-icon-line:nth-child(1){
+  
+}
+.toggle-icon-line:nth-child(2){
+  
+}
+.toggle-icon-line:nth-child(3){
+    margin-bottom:0px
+}
+.signin-or-signup-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0 36px;
+}
+#clickHeaderRightNav{
+    width: 30px;
+    padding: 5px;
+    display: block;
+}
 /* 
 =========================
     end header css
 =========================
 */
+
+/* 
+=========================
+    start banner  css
+=========================
+*/
+.banner-section{
+    background:url(../images/banner/header-hero-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 250px 0;
+    position: relative;
+}
+.banner-section::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:0;
+    height: 100%;
+    background: rgba(255,255,255,.05);
+}
+.banner-leaning-platform{}
+.banner-leaning-platform p {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+.banner-course-heading {
+    margin: 16px 0;
+}
+.banner-course-heading p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+.banner-course-heading p a {
+    display: inline-block;
+    text-decoration: underline;
+    color: var(--prmaryColor);
+}
+.banner-description{}
+.banner-description p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.banner-button {
+    margin-top: 20px;
+    display: flex;
+    gap: 0 17px;
+    align-items: center;
+}
+.find-course-btn{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondaryColor);
+}
+/* 
+=========================
+    end banner  css
+=========================
+*/
+
+/* 
+=========================
+   start about  css
+=========================
+*/
+.top-about-section{
+    background:#f8f8f8;
+}
+.padding-15{
+    padding: 10px;
+}
+.padding-15:last-child{
+    padding-bottom: 0px;
+}
+.about-top-icon i{
+    font-size: 50px;
+    color:var(--prmaryColor);
+    opacity: .7;
+}
+.about-top-count{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--secondaryColor);
+    margin-bottom: 8px;
+}
+.about-top-item-title{
+    font-size: 17px;
+    font-weight: 400;
+   line-height: 25px;
+}
+.about-top-icon {
+    margin-bottom: 15px;
+}
+.item-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* 
+=========================
+   end about  css
+=========================
+*/
+
+@media(min-width:575px){}
+@media(min-width:768px){}
+@media(min-width:992px){
+   
+}
+@media(min-width:1200px){
+    .header-middle-nav {
+        display: block;
+    }
+    .header-right-nav-left {
+        display: flex;
+    }
+    
+    .signin-button {
+        background: rgba(255, 84, 33, 1);
+        padding: 12px 25px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 1px;
+        display: block;
+    }
+    .signin-button-sm{
+        display: none;
+    }
+    .header-search{
+        display: block;
+    }
+    .header-right-content {
+        justify-content: space-between;
+    }
+    .toggle-icon-wrapper{
+        display: none;
+    }
+    .signin-or-signup-wrapper {
+        display: unset;
+        align-items: unset;
+        gap: unset;
+    }
+    #clickHeaderRightNav{
+        display: none;
+    }
+    .nav-item {
+        padding-bottom: 0px;
+    }
+}
