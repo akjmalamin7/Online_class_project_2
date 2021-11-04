@@ -145,7 +145,7 @@
     text-decoration: underline;
     color: var(--prmaryColor);
 }
-.banner-description{}
+
 .banner-description p {
     font-size: 14px;
     font-weight: 400;
@@ -157,12 +157,8 @@
     gap: 0 17px;
     align-items: center;
 }
-.find-course-btn{
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--secondaryColor);
-}
+
+
 /* 
 =========================
     end banner  css
@@ -176,6 +172,8 @@
 */
 .top-about-section{
     background:#f8f8f8;
+    position: relative;
+    overflow: hidden;
 }
 .padding-15:last-child{
     padding-bottom: 0px;
@@ -204,6 +202,45 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
+/* line curve */
+.about-top-animation-line-img-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+/* small multiple animation line */
+.about-top-animation-img-area{
+   position: absolute;
+   right:20px;
+   bottom: 50px;
+
+}
+.about-top-animation-img{
+    animation: aboutImgAnimation 3s infinite linear;
+
+}
+@keyframes aboutImgAnimation{
+    0%{
+        transform: scale(.8,.8);
+    }
+    50%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(.8,.8);
+    }
+}
+
+/* roun image */
+
+.about-top-animation-round-img-area {
+    position: absolute;
+    top: -180px;
+    right: 37px;
+    transform: rotate(-35deg);
+}
+
 /* 
 =========================
    end about  css
@@ -231,6 +268,7 @@
         color: #fff;
         letter-spacing: 1px;
         display: block;
+        border-radius: 3px ;
     }
     .signin-button-sm{
         display: none;

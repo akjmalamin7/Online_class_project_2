@@ -13,7 +13,6 @@
 
     clickHeaderRightNav.addEventListener('click', function(e){
         showHeaderRightNav.classList.toggle("showRightNav")
-        console.log("yes")
     })
 })()
 

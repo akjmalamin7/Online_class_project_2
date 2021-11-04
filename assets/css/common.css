@@ -82,6 +82,7 @@ input::placeholder{
     position: absolute;
     width: 100%;
     top: 67px;
+    z-index: 1;
 }
 .showMobileMenu .nav {
     display: flex;
@@ -99,7 +100,6 @@ input::placeholder{
     border-bottom: 1px solid rgba(30,39,46,.1);
 }
 
-.showRightNav{}
 .showRightNav.header-right-nav-left {
     display: flex;
     position: absolute;
@@ -109,13 +109,15 @@ input::placeholder{
     padding: 30px;
     gap: 40px;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    z-index: 1;
+    background-color: #fff;
 }
 
 
 /* button*/
-.common-button {
+.common-button, .find-course-btn {
     display: inline-block;
-    padding: 14px 26px;
+    padding: 12px 25px;
     background: var(--prmaryColor);
     color: #fff;
     font-size: 15px;
@@ -123,11 +125,53 @@ input::placeholder{
     letter-spacing: 1px;
     border-radius: 3px;
 }
-
+.find-course-btn {
+    background: rgb(255 84 33 / 54%);
+    color: var(--s);
+}
 .section-padding{
     padding: 50px 0;
 }
+.card-hover{
+   transition: all 0.3s;
+   background: transparent !important;
+   position: relative;
+   z-index:9;
+}
+.card-hover:hover{
+    box-shadow: 0 11px 61.1px 3.9px rgb(34 34 34 / 9%)!important;
+    background: #fff !important;
+}
+.card-hover:hover .hover-grid-icon{
+    opacity: 1;
+}
+.hover-grid-icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .3s;
+}
 
+.btn-hover{
+    position: relative;
+    padding: 12px 25px;
+   overflow: hidden;
+}
+.btn-hover::after{
+   content: "";
+   position: absolute;
+   left:-100%;
+   top:0;
+   background: rgb(246, 111, 70);
+   width: 100%;
+   height: 100%;
+    transition: 1s;
+}
+.btn-hover:hover::after{
+   left:100%;
+   transition: 1s;
+}
 @media(min-width:575px){}
 @media(min-width:768px){
     .section-padding{
