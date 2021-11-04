@@ -203,18 +203,35 @@
     padding-bottom: 50px;
 }
 /* line curve */
+.about-top-animation-line-img-area, .about-top-animation-img-area, .about-top-animation-round-img-area {
+  display: none;
+}
+
+
+/* 
+=========================
+   end about  css
+=========================
+*/
+
+@media(min-width:575px){}
+@media(min-width:768px){}
+@media(min-width:992px){
+   /* line curve */
 .about-top-animation-line-img-area {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100%; 
+    display: block;
 }
 /* small multiple animation line */
 .about-top-animation-img-area{
    position: absolute;
    right:20px;
    bottom: 50px;
-
+   display: block;
+       
 }
 .about-top-animation-img{
     animation: aboutImgAnimation 3s infinite linear;
@@ -239,18 +256,8 @@
     top: -180px;
     right: 37px;
     transform: rotate(-35deg);
+    display: block;
 }
-
-/* 
-=========================
-   end about  css
-=========================
-*/
-
-@media(min-width:575px){}
-@media(min-width:768px){}
-@media(min-width:992px){
-   
 }
 @media(min-width:1200px){
     .header-middle-nav {
