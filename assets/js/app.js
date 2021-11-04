@@ -1,4 +1,5 @@
 (function(){
+    // menu
     const heaerMiddleNav = document.getElementById('heaerMiddleNav')
     const toggleIconWrapper = document.getElementById('toggleIconWrapper')
 
