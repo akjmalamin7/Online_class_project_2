@@ -154,8 +154,9 @@
 .banner-button {
     margin-top: 20px;
     display: flex;
-    gap: 0 17px;
+    gap: 10px 17px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
