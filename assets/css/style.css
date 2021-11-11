@@ -32,21 +32,17 @@
     gap: 20px;
     align-items: center;
 }
-.glob-icon i{
-    color:rgba(255, 84, 33, 1);
+.header-cart-wrapper, .header-wishlist-wrapper {
+    display: flex;
 }
-.language-nav{
-    position: relative;
+.header-cart-wrapper i, .header-wishlist-wrapper i{
+    color: var(--prmaryColor);
 }
 .sub-nav{
     position: absolute;
     opacity: 0;
 }
-.select-language {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+
 .signin-button {
     display: none;
 }
@@ -146,11 +142,11 @@
     color: var(--prmaryColor);
 }
 
-.banner-description p {
+/* .banner-description p {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-}
+} */
 .banner-button {
     margin-top: 20px;
     display: flex;
@@ -209,6 +205,40 @@
 }
 
 
+/* bottom about */
+.about-bottom-title {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.about-bottom-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 73px;
+    height: 10px;
+    background-image: url(../images/about/section-title-shape.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    animation: horizontalShapeRide 4s infinite linear;
+}
+@keyframes horizontalShapeRide{
+    0%{
+        left:0px
+    }
+    50%{
+        left:50px
+    }
+    100%{
+        left:0px
+    }
+}
+.accordion-wrapper{
+    margin-top: 50px;
+}
 /* 
 =========================
    end about  css
@@ -269,7 +299,7 @@
     }
     
     .signin-button {
-        background: rgba(255, 84, 33, 1);
+        background: var(--prmaryColor);
         padding: 12px 25px;
         font-size: 15px;
         font-weight: 500;

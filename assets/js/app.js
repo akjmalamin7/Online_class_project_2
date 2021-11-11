@@ -14,6 +14,20 @@
     clickHeaderRightNav.addEventListener('click', function(e){
         showHeaderRightNav.classList.toggle("showRightNav")
     })
+
+    // accordion
+
+    const clickOnHeader = document.getElementsByClassName('accordion-header');
+    const accordion = document.getElementsByClassName('accordion');
+    [...accordion].forEach(children => {
+        children.addEventListener('click', function(){
+            [...accordion].forEach(children =>{
+                children.classList.remove('active-accordion')
+            })
+            children.classList.add('active-accordion')
+        })
+    })
+
 })()
 
  

@@ -5,17 +5,52 @@
 }
 
 /* start card */
-.card{
+.card, .accordion{
     border:1px solid rgba(30,39,46,.1);
     width: 100%;
     background: #fff;
     border-radius: 3px;
 }
-.card-body{
+.card-body, .accordion-header, .card-header{
     padding: 15px;
    
 }
 /* end card */
+
+/* start accordion */
+.accordion:not(:last-child){
+    margin-bottom: 15px;
+}
+.accordion{
+    overflow: hidden;
+}
+.accordion-header{
+  background: rgba(30,39,46,.04);
+}
+.accordion-body{
+    height: 0px;
+    opacity: 0;
+}
+.active-accordion .accordion-body{
+    height:auto;
+    opacity: 1;
+    overflow: visible;;
+    padding: 15px;
+}
+.active-accordion .accordion-header{
+    background-color: var(--prmaryColor);
+    color:#fff;
+}
+.accordion-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+.accordion-text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+/* end accordion */
 
 /*start  text align */
 .text-center{
