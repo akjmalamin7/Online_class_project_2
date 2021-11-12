@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 :root{
-    --prmaryColor:rgba(38, 178, 253, 1);
+    --primaryColor:rgba(38, 178, 253, 1);
     --secondaryColor:rgba(13, 13, 13, 1);
     --inputBg:rgb(0, 92, 159, .05);
     --bodyTextColor:rgba(13, 13, 13, .8);
@@ -20,6 +20,9 @@ a{
 }
 ul{
     list-style: none;
+}
+.section-bg{
+    background-color: #f8f8f8;
 }
 input, button{
     outline: none;
@@ -77,7 +80,7 @@ input::placeholder{
 }
 .nav-link {
     display: inline-block;
-    color: var(--prmaryColor);
+    color: var(--primaryColor);
 }
 .showMobileMenu {
     display: block !important;
@@ -121,7 +124,7 @@ input::placeholder{
 .common-button, .find-course-btn {
     display: inline-block;
     padding: 12px 25px;
-    background: var(--prmaryColor);
+    background: var(--primaryColor);
     color: #fff;
     font-size: 15px;
     font-weight: 400;
@@ -165,7 +168,7 @@ input::placeholder{
    position: absolute;
    left:-100%;
    top:0;
-   background: var(--prmaryColor);
+   background: var(--primaryColor);
    width: 100%;
    height: 100%;
     transition: 1s;
@@ -188,6 +191,68 @@ input::placeholder{
 .btn-hover:hover::after{
    left:100%;
    transition: 1s;
+}
+
+
+/* start section title */
+.section-title{
+    text-align: center;
+    max-width: 700px;
+    margin:0 auto;
+}
+.section-title-text{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+.section-title-text span:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 73px;
+    height: 10px;
+    background-image: url(../images/about/section-title-shape.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    animation: section-title-animation 4s infinite linear;
+}
+@keyframes section-title-animation{
+    0%{
+        left:-50%
+    }
+    50%{
+        left:50%
+    }
+    100%{
+        left:-50%
+    }
+}
+.section-title-text span{
+    color:  var(--primaryColor);
+    text-decoration: underline;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.section-subtitle-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* end section title */
+
+.animated-hover1{
+    transition: all .3s ease-in-out;
+}
+.animated-hover1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 11px 61.1px 3.9px rgb(34, 34, 34, .09)!important;
 }
 @media(min-width:575px){}
 @media(min-width:768px){
