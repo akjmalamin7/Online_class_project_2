@@ -248,10 +248,10 @@ input::placeholder{
 /* end section title */
 
 .animated-hover1{
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 .animated-hover1:hover{
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     box-shadow: 0 11px 61.1px 3.9px rgb(34, 34, 34, .09)!important;
 }
 @media(min-width:575px){}

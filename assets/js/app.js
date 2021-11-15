@@ -28,6 +28,15 @@
         })
     })
 
+    // popup
+    const video_popup_icon = document.getElementById("video_popup_icon");
+    const video_popup = document.getElementById("video_popup");
+    video_popup_icon.addEventListener('click', function(){
+        video_popup.style.display = "block"
+    })
+    video_popup.addEventListener('click', function(){
+        video_popup.style.display = "none"
+    })
 })()
 
  
