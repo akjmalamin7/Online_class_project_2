@@ -183,9 +183,9 @@ input::placeholder{
 }
 
 .sub-title-text{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 25px;
 }
 /* end title text */
 .btn-hover:hover::after{
@@ -241,9 +241,9 @@ input::placeholder{
     padding-bottom: 20px;
 }
 .section-subtitle-text{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 26px;
 }
 /* end section title */
 
@@ -254,6 +254,9 @@ input::placeholder{
     transform: translateY(-15px);
     box-shadow: 0 11px 61.1px 3.9px rgb(34, 34, 34, .09)!important;
 }
+
+
+/*  */
 @media(min-width:575px){}
 @media(min-width:768px){
     .section-padding{

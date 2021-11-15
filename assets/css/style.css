@@ -284,9 +284,9 @@
     margin: 20px 0;
 }
 .course-name, .help-content-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 25px;
+    line-height: 28px;
 }
 .course-price {
     font-size: 20px;
@@ -326,11 +326,11 @@
 .help-item-icon i{
    font-size: 18px;
 }
-.help-content-subtitle{
-    font-size: 15px;
+.help-content-subtitle {
+    font-size: 16px;
     font-weight: 400;
-    color:rgba(13, 13, 13, .7);
-    line-height: 20px;
+    color: rgba(13, 13, 13, .7);
+    line-height: 25px;
 }
 /* 
 =========================
@@ -410,7 +410,7 @@
     background:rgba(30,39,46,.5);
     z-index: 4;
     padding: 20px;
-    /* display: none; */
+    display: none;
 }
 .video_player{
     width: 960px;
@@ -428,6 +428,111 @@
 /* 
 =========================
    end watch video css
+=========================
+*/
+
+/* 
+=========================
+   start review css
+=========================
+*/
+.review-section{
+    position: relative;
+    overflow: hidden;
+}
+.testimonial-wrappr{
+    max-width: 800px;
+    width:100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial-content{
+    text-align: center;
+}
+.testimonial-image{
+    position: relative;
+    z-index: 2;
+}
+.testimonial-image, .review-animation1, .review-animation2, .review-animation3, .review-animation4 {
+    width: 90px;
+    height: 90px;
+    border: 2px solid var(--primaryColor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name-of-testimony {
+    font-size: 18px;
+    font-weight: 600;
+}
+.institutes-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+.institutes-name span{
+    color:var(--primaryColor)
+}
+.testimonies-feedback {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    padding: 0 40px;
+}
+.testimonial-prev, .testimonial-next {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--primaryColor);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.testimonial-prev:hover, .testimonial-next:hover {
+    background: var(--primaryColor);
+}
+.testimonial-prev:hover i, .testimonial-next:hover i {
+   color:#ffffff;
+}
+.testimonial-control{
+    display: flex;
+    gap: 0 13px;
+    justify-content: center;
+}
+.testimonial-prev i, .testimonial-next i {
+    color: var(--primaryColor);
+    transition: all .3s linear;
+}
+
+/* animation */
+.review-animation1, 
+.review-animation9, 
+.review-animation2, 
+.review-animation3, 
+.review-animation4, 
+.review-animation5, 
+.review-animation6, 
+.review-animation7, 
+.review-animation8{
+ display: none;
+}
+
+.review-animation1 img, .review-animation2 img, .review-animation3 img, .review-animation4 img{
+   border-radius: 50%;
+}
+/* 
+=========================
+   end review css
 =========================
 */
 
@@ -637,6 +742,140 @@
             right:10px;
         }
     }
+
+
+
+    /* 
+=========================
+   start review css
+=========================
+*/
+.review-animation1, 
+.review-animation9, 
+.review-animation2, 
+.review-animation3, 
+.review-animation4, 
+.review-animation5, 
+.review-animation6, 
+.review-animation7, 
+.review-animation8{
+ display: block;
+}
+
+/* animation */
+.review-animation1 {
+   position: absolute;
+   top:120px;
+   left: 150px;
+   z-index:2
+}
+.review-animation2{
+    position: absolute;
+    bottom:50px;
+    left: 30px;
+    z-index:2
+}
+.review-animation3{
+    position: absolute;
+    transform: translateY(-50%);
+    top:50%;
+    left: 330px;
+    z-index:2
+}
+.review-animation4{
+    position: absolute;
+  bottom: 100px;
+   right:100px;
+   z-index:2
+}
+.review-animation5{
+    position: absolute;
+    max-width: 725px;
+    top: 100px;
+    left: 7%;
+    z-index:1;
+}
+.review-animation6{
+    position: absolute;
+    max-width: 435px;
+    top: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,40%);
+    transform: translate(-50%,40%);
+    z-index:1;
+}
+.review-animation7{
+    position: absolute;
+    max-width: 120px;
+    animation: reviewAnimation7 4s linear infinite;
+}
+.review-animation8 {
+    position: absolute;
+    max-width: 60px;
+    animation: reviewAnimation8 4s linear infinite;
+    left: 33%;
+    top: 26%;
+}
+.review-animation9 {
+    position: absolute;
+    max-width: 365px;
+    right: 3%;
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%);
+    animation: reviewAnimation9 4s linear infinite;
+}
+
+
+@keyframes reviewAnimation7{
+    0%{
+        top:40%;
+        left:7%
+    }
+    50%{
+        top:50%;
+        left:7%
+    }
+    100%{
+        top:40%;
+        left:7%
+    }
+}
+@keyframes reviewAnimation8{
+    0%{
+       transform: rotate(0deg);
+    }
+    100%{
+       transform: rotate(360deg);
+       
+    }
+}
+@keyframes reviewAnimation9{
+    0%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25%{
+        -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    }
+    50%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    75%{
+        -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+/* 
+=========================
+   end review css
+=========================
+*/
 }
 @media(min-width:1200px){
     .header-middle-nav {
